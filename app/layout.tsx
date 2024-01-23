@@ -4,31 +4,40 @@ import './globals.css'
 import Sidebar from '@/components/sidebar'
 import SupabaseProvider from '@/Providers/SupabaseProviders'
 import UserProvider from '@/Providers/UserProvider'
-import ModalProvider from '@/Providers/ModelProvider'
+import ModalProvider from '@/Providers/ModalProvider'
 import ToasterProvider from '@/Providers/TosterProvider'
+import getSongsByUserId from '@/actions/getSongsByUserId'
+import './globals.css'
+import Player from '@/components/Players'
 
 const font = Figtree({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Spotify-clone',
-  description: 'Listen to music',
+export const metadata = {
+  title: 'Spotify Clone',
+  description: 'Spotify Clone',
 }
 
-export default function RootLayout({
+export const revalidate = 0;
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  // const products = await getActiveProductsWithPrices();
+  const userSongs = await getSongsByUserId();
+
   return (
     <html lang="en">
       <body className={font.className}>
-        <ToasterProvider/>
+        <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
-            <ModalProvider />
-              <Sidebar>
-                {children}
-              </Sidebar>
+            <ModalProvider products={[]} />
+            <Sidebar songs={userSongs}>
+              {children}
+            </Sidebar>
+            <Player />
           </UserProvider>
         </SupabaseProvider>
       </body>

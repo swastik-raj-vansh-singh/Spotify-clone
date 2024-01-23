@@ -7,7 +7,7 @@ export interface Song {
   title: string;
   song_path: string;
   image_path: string;
-}
+};
 
 export interface Product {
   id: string;
@@ -16,7 +16,7 @@ export interface Product {
   description?: string;
   image?: string;
   metadata?: Stripe.Metadata;
-}
+};
 
 export interface Price {
   id: string;
@@ -31,12 +31,12 @@ export interface Price {
   trial_period_days?: number | null;
   metadata?: Stripe.Metadata;
   products?: Product;
-}
+};
 
 export interface Customer {
   id: string;
   stripe_customer_id?: string;
-}
+};
 
 export interface UserDetails {
   id: string;
@@ -46,11 +46,11 @@ export interface UserDetails {
   avatar_url?: string;
   billing_address?: Stripe.Address;
   payment_method?: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
-}
+};
 
 export interface ProductWithPrice extends Product {
   prices?: Price[];
-}
+};
 
 export interface Subscription {
   id: string;
@@ -69,4 +69,4 @@ export interface Subscription {
   trial_start?: string;
   trial_end?: string;
   prices?: Price;
-}
+};
