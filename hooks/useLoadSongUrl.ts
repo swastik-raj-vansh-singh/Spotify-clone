@@ -1,10 +1,10 @@
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 import { Song } from "@/types";
 
 const useLoadSongUrl = (song: Song) => {
   const supabaseClient = useSupabaseClient();
-
+  // const {supabaseClient} = useSessionContext();
   if (!song) {
     return '';
   }
