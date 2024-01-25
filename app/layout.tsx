@@ -9,6 +9,7 @@ import ToasterProvider from '@/Providers/TosterProvider'
 import getSongsByUserId from '@/actions/getSongsByUserId'
 import './globals.css'
 import Player from '@/components/Players'
+import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 
 const font = Figtree({ subsets: ['latin'] })
 
@@ -24,7 +25,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // const products = await getActiveProductsWithPrices();
+  const products = await getActiveProductsWithPrices();
   const userSongs = await getSongsByUserId();
 
   return (
