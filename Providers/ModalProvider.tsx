@@ -27,8 +27,9 @@ const ModalProvider: React.FC<ModalProviderProps> = ({
   return (
     <>
       <AuthModal />
-      <UploadModal />
       <SubscribeModal products={products} />
+      <UploadModal />
+      
 
     </>
   );
