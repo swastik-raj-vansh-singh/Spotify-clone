@@ -35,7 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-##Here I also added the subscription part of the spotify 
+## Here I also added the subscription part of the spotify 
 ![ss](https://github.com/swastik-raj-vansh-singh/Spotify-clone/assets/95278835/479edad4-9382-4437-bdc7-0cfb659932c4)
 
 but dur to server error my subscription mode is not working you can definately try it on your system code for the same is also uploade in this repo
