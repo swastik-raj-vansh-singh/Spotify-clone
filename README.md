@@ -38,7 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Here I also added the subscription part of the spotify 
 ![ss](https://github.com/swastik-raj-vansh-singh/Spotify-clone/assets/95278835/479edad4-9382-4437-bdc7-0cfb659932c4)
 
-but dur to server error my subscription mode is not working you can definately try it on your system code for the same is also uploade in this repo
+but due to server error my subscription mode is not working you can definately try it on your system, code for the same is also uploade in this repo
 ![ss2](https://github.com/swastik-raj-vansh-singh/Spotify-clone/assets/95278835/9fd844a7-6a3a-4279-b831-8b9a70f14a0b)
 
 if you get some error regarding the subscription modal please reffer to my other repo named as spotify-clone 2.0 where i remove the subscription modal for your ease to reun the application 
